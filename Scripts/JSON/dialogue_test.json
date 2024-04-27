@@ -1,0 +1,6 @@
+{
+    "DialogueName": [ // DialogueName will be displayed as a '@export' on the png/object inspector
+        ["CharacterName", "Emotion", "Text"],
+        ["CharacterName", "Emotion", "Text"]
+        ]
+}

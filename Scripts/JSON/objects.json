@@ -1,0 +1,3 @@
+{
+	"Name" : ["Description", [999, 999, 999, 999, 999]] // [psy_strength, psy_defense, speed, luck, start beating value]
+}

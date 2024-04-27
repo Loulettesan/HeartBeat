@@ -1,0 +1,309 @@
+[gd_scene load_steps=14 format=3 uid="uid://bmnlhopv8cqak"]
+
+[ext_resource type="Script" path="res://Scripts/Dialogue.gd" id="1_bygee"]
+[ext_resource type="Texture2D" uid="uid://dqvwinik3t3t7" path="res://Sprites/Doodles/dialogue_bg.png" id="1_vin1h"]
+[ext_resource type="Texture2D" uid="uid://dtyhjnb6bd7nv" path="res://icon.svg" id="3_sljwo"]
+[ext_resource type="FontFile" uid="uid://c6oabkhgnbnkf" path="res://GUI/walshes/ot/walshes.otf" id="4_kdg8o"]
+[ext_resource type="FontFile" uid="uid://dcdf7prv3u7gt" path="res://GUI/coolvetica/coolvetica condensed rg.otf" id="5_asbvy"]
+
+[sub_resource type="Gradient" id="Gradient_2keu5"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.0666667, 0.0705882, 0.101961, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_783da"]
+gradient = SubResource("Gradient_2keu5")
+
+[sub_resource type="Animation" id="Animation_8q58l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ChoiceContainer:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1050, -215)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ChoiceContainer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("TextureRect:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_trw13"]
+resource_name = "appear"
+length = 0.5
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.225313, 1),
+"update": 0,
+"values": [Vector2(0, 50), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ChoiceContainer:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(0.233258, 1),
+"update": 0,
+"values": [Vector2(1050, -150), Vector2(1050, -215)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ChoiceContainer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pfat2"]
+resource_name = "disappear"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.3),
+"transitions": PackedFloat32Array(0.2, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 50)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ywbtn"]
+resource_name = "fade"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_24smd"]
+resource_name = "unfade"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bl4ah"]
+_data = {
+"RESET": SubResource("Animation_8q58l"),
+"appear": SubResource("Animation_trw13"),
+"disappear": SubResource("Animation_pfat2"),
+"fade": SubResource("Animation_ywbtn"),
+"unfade": SubResource("Animation_24smd")
+}
+
+[node name="Dialogue" type="NinePatchRect" groups=["Dialogue"]]
+process_mode = 3
+modulate = Color(1, 1, 1, 0)
+z_index = 5
+offset_right = 1520.0
+offset_bottom = 256.0
+scale = Vector2(0.5, 0.5)
+pivot_offset = Vector2(-760, 156)
+texture = ExtResource("1_vin1h")
+patch_margin_left = 15
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 15
+script = ExtResource("1_bygee")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -962.0
+offset_top = -1084.0
+offset_right = 962.0
+offset_bottom = 1.52588e-05
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(962, 542)
+texture = SubResource("GradientTexture1D_783da")
+
+[node name="Face" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -193.0
+offset_top = -3.0
+offset_right = 93.0
+offset_bottom = 283.0
+texture = ExtResource("3_sljwo")
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 0
+offset_left = 136.0
+offset_top = -43.0
+offset_right = 252.0
+offset_bottom = 51.0
+theme_override_colors/font_outline_color = Color(0.270588, 0.156863, 0.235294, 1)
+theme_override_constants/outline_size = 32
+theme_override_fonts/font = ExtResource("4_kdg8o")
+theme_override_font_sizes/font_size = 75
+text = "Lucie"
+
+[node name="Speech" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.249
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 110.0
+offset_top = 135.745
+offset_right = -110.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("5_asbvy")
+theme_override_font_sizes/normal_font_size = 50
+text = "Ici sera le texte"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_bl4ah")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="ChoiceContainer" type="VBoxContainer" parent="."]
+visible = false
+z_index = -1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 1050.0
+offset_top = -215.0
+offset_right = 1500.0
+offset_bottom = -7.0
+grow_horizontal = 0
+theme_override_constants/separation = 5
+alignment = 2
+
+[node name="Choice1" type="Button" parent="ChoiceContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_kdg8o")
+theme_override_font_sizes/font_size = 75
+text = "Choix 1"
+
+[node name="Choice2" type="Button" parent="ChoiceContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_kdg8o")
+theme_override_font_sizes/font_size = 75
+text = "Choix 2"
+
+[connection signal="pressed" from="ChoiceContainer/Choice1" to="." method="_on_choice_1_pressed"]
+[connection signal="pressed" from="ChoiceContainer/Choice2" to="." method="_on_choice_2_pressed"]

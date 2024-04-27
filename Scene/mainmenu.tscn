@@ -1,0 +1,1040 @@
+[gd_scene load_steps=45 format=3 uid="uid://b5m262ttep6fs"]
+
+[ext_resource type="Script" path="res://Scripts/mainmenu.gd" id="1_r1chr"]
+[ext_resource type="Texture2D" uid="uid://b620bgwe0lo2k" path="res://Sprites/Menu_AnimBG/menu_bg_0009.png" id="2_m0an5"]
+[ext_resource type="Texture2D" uid="uid://b7laxgp12vydk" path="res://logo_large_color_light.png" id="2_rb3k2"]
+[ext_resource type="FontFile" uid="uid://c041yt1spsexl" path="res://GUI/graveyard_brk/graveyrd.ttf" id="3_17bnt"]
+[ext_resource type="Texture2D" uid="uid://b21sjx3yqmgrb" path="res://Sprites/Menu_AnimBG/menu_bg_0011.png" id="3_fi8vb"]
+[ext_resource type="Texture2D" uid="uid://b347ygbauyjrh" path="res://Sprites/Menu_AnimBG/menu_bg_0013.png" id="4_06gc2"]
+[ext_resource type="FontFile" uid="uid://djhidll03q5ir" path="res://GUI/walshes/tt/walshes.ttf" id="4_11sv7"]
+[ext_resource type="AudioStream" uid="uid://jwc8dw1p8sn7" path="res://Musics_Sounds/Brain Damage.ogg" id="5_bykmj"]
+[ext_resource type="FontFile" uid="uid://c6oabkhgnbnkf" path="res://GUI/walshes/ot/walshes.otf" id="5_cp10v"]
+[ext_resource type="Texture2D" uid="uid://cvkdf1dlappd5" path="res://Sprites/Menu_AnimBG/menu_bg_0015.png" id="5_lgg7d"]
+[ext_resource type="AudioStream" uid="uid://b8knhuj5qx4b7" path="res://Musics_Sounds/10_ui_sfx_free_samples/001_Hover_01.wav" id="6_5vjib"]
+[ext_resource type="Texture2D" uid="uid://gvm0hwibx2cu" path="res://Sprites/Menu_AnimBG/menu_bg_0024.png" id="6_kbqtr"]
+[ext_resource type="AudioStream" uid="uid://cjoban3ylvw6m" path="res://Musics_Sounds/10_ui_sfx_free_samples/013_Confirm_03.wav" id="7_2n2u6"]
+[ext_resource type="Texture2D" uid="uid://dlpsktr7sbdvc" path="res://Sprites/Menu_AnimBG/menu_bg_0025.png" id="7_ydj58"]
+[ext_resource type="Texture2D" uid="uid://cyrx17j8ojm64" path="res://Sprites/Menu_AnimBG/menu_bg_0026.png" id="8_56la6"]
+[ext_resource type="AudioStream" uid="uid://dhrdtil4bkhux" path="res://Musics_Sounds/10_ui_sfx_free_samples/029_Decline_09.wav" id="8_ny768"]
+[ext_resource type="Texture2D" uid="uid://ci3x52o34gq05" path="res://Sprites/Menu_AnimBG/menu_bg_0027.png" id="9_877n2"]
+[ext_resource type="Texture2D" uid="uid://bflcgu4hjpasw" path="res://Sprites/Menu_AnimBG/menu_bg_0028.png" id="10_fvy3g"]
+[ext_resource type="Texture2D" uid="uid://cersy57qnmfwg" path="res://Sprites/Menu_AnimBG/menu_bg_0029.png" id="11_re4sp"]
+[ext_resource type="Texture2D" uid="uid://dtsmvyej0hy4m" path="res://Sprites/Menu_AnimBG/menu_bg_0030.png" id="12_kawbf"]
+[ext_resource type="Texture2D" uid="uid://vbq56v8xo7p1" path="res://Sprites/Menu_AnimBG/menu_bg_0032.png" id="13_nyslf"]
+[ext_resource type="Texture2D" uid="uid://ckansf8icnvc1" path="res://Sprites/Menu_AnimBG/menu_bg_0040.png" id="14_ukfvp"]
+[ext_resource type="Texture2D" uid="uid://cbf7dk4hvhdpk" path="res://Sprites/Menu_AnimBG/menu_bg_0041.png" id="15_kgcd7"]
+[ext_resource type="Texture2D" uid="uid://c08h7dwkfnxuk" path="res://Sprites/Menu_AnimBG/menu_bg_0042.png" id="16_0grsb"]
+[ext_resource type="Texture2D" uid="uid://bt4lpbveo68m6" path="res://Sprites/Menu_AnimBG/menu_bg_0043.png" id="17_f0v37"]
+[ext_resource type="Texture2D" uid="uid://bh3mp75h1odid" path="res://Sprites/Menu_AnimBG/menu_bg_0055.png" id="18_2efx7"]
+[ext_resource type="Texture2D" uid="uid://b05cxliv31l5e" path="res://Sprites/Menu_AnimBG/menu_bg_0057.png" id="19_v7ihr"]
+[ext_resource type="Texture2D" uid="uid://bup0cvht51dsk" path="res://Sprites/Menu_AnimBG/menu_bg_0059.png" id="20_ttpkg"]
+[ext_resource type="Texture2D" uid="uid://dt63064pv1d6r" path="res://Sprites/Menu_AnimBG/menu_bg_0061.png" id="21_4mwsk"]
+[ext_resource type="Texture2D" uid="uid://c7xicmnq1548c" path="res://Sprites/Menu_AnimBG/menu_bg_0063.png" id="22_i217t"]
+[ext_resource type="Texture2D" uid="uid://ci07633djlc5s" path="res://Sprites/Menu_AnimBG/menu_bg_0000.png" id="23_i6m5s"]
+[ext_resource type="Texture2D" uid="uid://v2tvlynjcark" path="res://GUI/controller.png" id="28_ci2w0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dr0yg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_m0an5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_fi8vb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_06gc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lgg7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kbqtr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ydj58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_56la6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_877n2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fvy3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_re4sp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_kawbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_nyslf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ukfvp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_kgcd7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_0grsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_f0v37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_2efx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_v7ihr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ttpkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_4mwsk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_i217t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_i6m5s")
+}],
+"loop": true,
+"name": &"menu_anim",
+"speed": 8.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_bh4it"]
+offsets = PackedFloat32Array(0.527607)
+colors = PackedColorArray(0.0352941, 0.0352941, 0.0588235, 0.901961)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_o3prj"]
+gradient = SubResource("Gradient_bh4it")
+
+[sub_resource type="Gradient" id="Gradient_11fvi"]
+offsets = PackedFloat32Array(0.527607)
+colors = PackedColorArray(0.0731757, 0.0731794, 0.106697, 0.901961)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ch7gf"]
+gradient = SubResource("Gradient_11fvi")
+
+[sub_resource type="Animation" id="Animation_5pk65"]
+resource_name = "Menu"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Menu:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1.5, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Menu:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Menu_BG:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Menu_BG:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_gl1bu"]
+resource_name = "Notification_Show"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Notification:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 4, 5),
+"transitions": PackedFloat32Array(0.2, 1, 6, 1),
+"update": 0,
+"values": [Vector2(-200, 0), Vector2(0, 0), Vector2(0, 0), Vector2(-200, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Notification:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_x04ln"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Splash_screen/GameEngine:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Splash_screen/Creator:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Splash_screen/GameEngine:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Splash_screen/Creator:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Menu:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Menu:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SettingsScreen:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SettingsScreen:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Notification:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1880, 1016)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Notification:modulate")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Menu_BG:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Menu_BG:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_75guv"]
+resource_name = "SettingsScreen"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SettingsScreen:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SettingsScreen:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Notification:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-200, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Notification:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_6t01w"]
+resource_name = "Splash_Creator"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Splash_screen/Creator:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 1.3, 2.7, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Splash_screen/Creator:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_tir00"]
+resource_name = "Splash_GameEngine"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Splash_screen/GameEngine:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 1.7, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Splash_screen/GameEngine:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rdosc"]
+_data = {
+"Menu": SubResource("Animation_5pk65"),
+"Notification_Show": SubResource("Animation_gl1bu"),
+"RESET": SubResource("Animation_x04ln"),
+"SettingsScreen": SubResource("Animation_75guv"),
+"Splash_Creator": SubResource("Animation_6t01w"),
+"Splash_GameEngine": SubResource("Animation_tir00")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r1chr")
+
+[node name="Menu_BG" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Menu_BG"]
+position = Vector2(960, 540)
+sprite_frames = SubResource("SpriteFrames_dr0yg")
+animation = &"menu_anim"
+
+[node name="Splash_screen" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameEngine" type="Control" parent="Splash_screen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Splash_screen/GameEngine"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -253.0
+offset_top = -106.5
+offset_right = 253.0
+offset_bottom = 106.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = -50
+alignment = 1
+
+[node name="Label" type="Label" parent="Splash_screen/GameEngine/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Made with             "
+horizontal_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="Splash_screen/GameEngine/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_rb3k2")
+
+[node name="Creator" type="Control" parent="Splash_screen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Splash_screen/Creator"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -253.0
+offset_top = -106.5
+offset_right = 253.0
+offset_bottom = 106.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Splash_screen/Creator/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Made by "
+
+[node name="Name" type="Label" parent="Splash_screen/Creator/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "Loulettesan"
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="Menu"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 324.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_17bnt")
+theme_override_font_sizes/font_size = 250
+text = "HEARTBEAT "
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -560.0
+offset_top = 298.0
+offset_right = -89.0
+offset_bottom = -153.0
+theme_override_constants/separation = 35
+
+[node name="Start" type="Button" parent="Menu/Buttons" groups=["MainButtons"]]
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../Quit")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../Settings")
+focus_next = NodePath("../Settings")
+focus_previous = NodePath("../Quit")
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("4_11sv7")
+theme_override_font_sizes/font_size = 100
+text = "Nouvelle Partie"
+flat = true
+alignment = 2
+language = "en"
+
+[node name="Load" type="Button" parent="Menu/Buttons" groups=["MainButtons"]]
+visible = false
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../Start")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../Settings")
+focus_next = NodePath("../Settings")
+focus_previous = NodePath("../Start")
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("4_11sv7")
+theme_override_font_sizes/font_size = 100
+text = "Charger"
+flat = true
+alignment = 2
+
+[node name="Settings" type="Button" parent="Menu/Buttons" groups=["MainButtons"]]
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../Start")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../Quit")
+focus_next = NodePath("../Quit")
+focus_previous = NodePath("../Start")
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("4_11sv7")
+theme_override_font_sizes/font_size = 100
+text = "Paramètres"
+flat = true
+alignment = 2
+
+[node name="Quit" type="Button" parent="Menu/Buttons" groups=["MainButtons"]]
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../Settings")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../Start")
+focus_next = NodePath("../Start")
+focus_previous = NodePath("../Settings")
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("4_11sv7")
+theme_override_font_sizes/font_size = 100
+text = "Quitter"
+flat = true
+alignment = 2
+
+[node name="SettingsScreen" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SettingsBG" type="TextureRect" parent="SettingsScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -800.0
+offset_top = -500.0
+offset_right = 800.0
+offset_bottom = 500.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_o3prj")
+
+[node name="Exit" type="Button" parent="SettingsScreen" groups=["SettingsButtons"]]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -783.0
+offset_top = -483.0
+offset_right = -721.0
+offset_bottom = -419.0
+mouse_default_cursor_shape = 2
+theme_override_font_sizes/font_size = 30
+text = "X"
+
+[node name="Options" type="VBoxContainer" parent="SettingsScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -562.0
+offset_top = -373.0
+offset_right = 563.0
+offset_bottom = 405.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="Language" type="HBoxContainer" parent="SettingsScreen/Options"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="LangLabel" type="Label" parent="SettingsScreen/Options/Language"]
+layout_mode = 2
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("5_cp10v")
+theme_override_font_sizes/font_size = 40
+text = "Langue"
+
+[node name="LangOptions" type="OptionButton" parent="SettingsScreen/Options/Language" groups=["SettingsButtons"]]
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../../BrightnessVbox/VBoxContainer/ResolutionHbox/ScreenOptions")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../../HBoxContainer/VBoxContainer/HBoxContainer/CheckBox_Cont")
+focus_next = NodePath("../../HBoxContainer/VBoxContainer/HBoxContainer/CheckBox_Cont")
+focus_previous = NodePath("../../BrightnessVbox/VBoxContainer/ResolutionHbox/ScreenOptions")
+theme_override_fonts/font = ExtResource("5_cp10v")
+theme_override_font_sizes/font_size = 30
+alignment = 2
+item_count = 2
+selected = 1
+popup/item_0/text = "        English      "
+popup/item_0/id = 0
+popup/item_1/text = "        Français     "
+popup/item_1/id = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SettingsScreen/Options"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsScreen/Options/HBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="ControlDevice" type="Label" parent="SettingsScreen/Options/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_17bnt")
+theme_override_font_sizes/font_size = 55
+text = "--- Contrôles ---"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SettingsScreen/Options/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Controller" type="Label" parent="SettingsScreen/Options/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_cp10v")
+theme_override_font_sizes/font_size = 30
+text = "Manette  "
+
+[node name="CheckBox_Cont" type="CheckBox" parent="SettingsScreen/Options/HBoxContainer/VBoxContainer/HBoxContainer" groups=["SettingsButtons"]]
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../../../../Language/LangOptions")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../../HBoxContainer2/CheckBox_Keyb")
+focus_next = NodePath("../../HBoxContainer2/CheckBox_Keyb")
+focus_previous = NodePath("../../../../Language/LangOptions")
+button_pressed = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="SettingsScreen/Options/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Keyboard" type="Label" parent="SettingsScreen/Options/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_cp10v")
+theme_override_font_sizes/font_size = 30
+text = "Clavier  "
+
+[node name="CheckBox_Keyb" type="CheckBox" parent="SettingsScreen/Options/HBoxContainer/VBoxContainer/HBoxContainer2" groups=["SettingsButtons"]]
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../../HBoxContainer/CheckBox_Cont")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../../../../SoundVbox/VBoxContainer/music")
+focus_next = NodePath("../../../../SoundVbox/VBoxContainer/music")
+focus_previous = NodePath("../../HBoxContainer/CheckBox_Cont")
+
+[node name="InputControls" type="TextureRect" parent="SettingsScreen/Options/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("28_ci2w0")
+stretch_mode = 3
+
+[node name="SoundVbox" type="VBoxContainer" parent="SettingsScreen/Options"]
+layout_mode = 2
+alignment = 1
+
+[node name="Audio" type="Label" parent="SettingsScreen/Options/SoundVbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_17bnt")
+theme_override_font_sizes/font_size = 55
+text = "--- Audio ---"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsScreen/Options/SoundVbox"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="SettingsScreen/Options/SoundVbox/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_cp10v")
+theme_override_font_sizes/font_size = 30
+text = "Musique"
+horizontal_alignment = 1
+
+[node name="music" type="HSlider" parent="SettingsScreen/Options/SoundVbox/VBoxContainer"]
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../../../HBoxContainer/VBoxContainer/HBoxContainer2/CheckBox_Keyb")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../../VBoxContainer2/soundeffect")
+focus_next = NodePath("../../VBoxContainer2/soundeffect")
+focus_previous = NodePath("../../../BrightnessVbox/VBoxContainer/ResolutionHbox/ScreenOptions")
+min_value = -20.0
+max_value = 10.0
+value = -2.0
+rounded = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="SettingsScreen/Options/SoundVbox"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label2" type="Label" parent="SettingsScreen/Options/SoundVbox/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_cp10v")
+theme_override_font_sizes/font_size = 30
+text = "Effets Sonores"
+horizontal_alignment = 1
+
+[node name="soundeffect" type="HSlider" parent="SettingsScreen/Options/SoundVbox/VBoxContainer2"]
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../../VBoxContainer/music")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../../../HBoxContainer/VBoxContainer/HBoxContainer/CheckBox_Cont")
+focus_previous = NodePath("../../VBoxContainer/music")
+min_value = -20.0
+max_value = 10.0
+value = -2.0
+rounded = true
+
+[node name="BrightnessVbox" type="VBoxContainer" parent="SettingsScreen/Options"]
+layout_mode = 2
+alignment = 1
+
+[node name="Brightness" type="Label" parent="SettingsScreen/Options/BrightnessVbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_17bnt")
+theme_override_font_sizes/font_size = 55
+text = "--- Écran ---"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsScreen/Options/BrightnessVbox"]
+layout_mode = 2
+theme_override_constants/separation = 35
+
+[node name="ResolutionHbox" type="HBoxContainer" parent="SettingsScreen/Options/BrightnessVbox/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="ScreenLabel" type="Label" parent="SettingsScreen/Options/BrightnessVbox/VBoxContainer/ResolutionHbox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_cp10v")
+theme_override_font_sizes/font_size = 40
+text = "Résolution"
+
+[node name="ScreenOptions" type="OptionButton" parent="SettingsScreen/Options/BrightnessVbox/VBoxContainer/ResolutionHbox" groups=["SettingsButtons"]]
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_right = NodePath(".")
+theme_override_fonts/font = ExtResource("5_cp10v")
+theme_override_font_sizes/font_size = 30
+alignment = 2
+item_count = 2
+selected = 0
+popup/item_0/text = "Fenêtré      "
+popup/item_0/id = 0
+popup/item_1/text = "       Plein Écran    "
+popup/item_1/id = 1
+
+[node name="Title" type="Label" parent="SettingsScreen"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -145.5
+offset_top = -530.0
+offset_right = 146.5
+offset_bottom = -352.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_17bnt")
+theme_override_font_sizes/font_size = 80
+text = "Paramètres"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Warning" type="TextureRect" parent="SettingsScreen"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -365.0
+offset_top = -151.0
+offset_right = 365.0
+offset_bottom = 151.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_ch7gf")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsScreen/Warning"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -232.0
+offset_top = -134.0
+offset_right = 232.0
+offset_bottom = 134.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Title" type="Label" parent="SettingsScreen/Warning/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_17bnt")
+theme_override_font_sizes/font_size = 75
+text = "Warning"
+horizontal_alignment = 1
+
+[node name="Description2" type="Label" parent="SettingsScreen/Warning/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("5_cp10v")
+theme_override_font_sizes/font_size = 30
+text = "Are you sure you want to play with your Keyboard ?
+We advise you to play with a Controller"
+horizontal_alignment = 1
+
+[node name="Choice" type="HBoxContainer" parent="SettingsScreen/Warning/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Yes" type="Button" parent="SettingsScreen/Warning/VBoxContainer/Choice" groups=["WarningButtons"]]
+layout_mode = 2
+focus_neighbor_left = NodePath("../No")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath("../No")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath("../No")
+focus_previous = NodePath("../No")
+theme_override_fonts/font = ExtResource("3_17bnt")
+theme_override_font_sizes/font_size = 50
+text = "  Yes  "
+language = "en"
+
+[node name="No" type="Button" parent="SettingsScreen/Warning/VBoxContainer/Choice" groups=["WarningButtons"]]
+layout_mode = 2
+focus_neighbor_left = NodePath("../Yes")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath("../Yes")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath("../Yes")
+focus_previous = NodePath("../Yes")
+theme_override_fonts/font = ExtResource("3_17bnt")
+theme_override_font_sizes/font_size = 50
+text = "  No  "
+
+[node name="Notification" type="Label" parent="."]
+layout_mode = 1
+offset_left = 1880.0
+offset_top = 1016.0
+offset_right = 1881.0
+offset_bottom = 1077.0
+theme_override_fonts/font = ExtResource("5_cp10v")
+theme_override_font_sizes/font_size = 50
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_rdosc")
+}
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="." groups=["Music"]]
+stream = ExtResource("5_bykmj")
+bus = &"Music"
+
+[node name="ButtonHover" type="AudioStreamPlayer" parent="." groups=["SoundEffect"]]
+stream = ExtResource("6_5vjib")
+bus = &"SoundEffect"
+
+[node name="ButtonConfirm" type="AudioStreamPlayer" parent="." groups=["SoundEffect"]]
+stream = ExtResource("7_2n2u6")
+bus = &"SoundEffect"
+
+[node name="ButtonDecline" type="AudioStreamPlayer" parent="." groups=["SoundEffect"]]
+stream = ExtResource("8_ny768")
+bus = &"SoundEffect"
+
+[connection signal="pressed" from="Menu/Buttons/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Menu/Buttons/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Menu/Buttons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Menu/Buttons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="SettingsScreen/Exit" to="." method="_on_exit_pressed"]
+[connection signal="toggled" from="SettingsScreen/Options/HBoxContainer/VBoxContainer/HBoxContainer/CheckBox_Cont" to="." method="_on_check_box_cont_toggled"]
+[connection signal="toggled" from="SettingsScreen/Options/HBoxContainer/VBoxContainer/HBoxContainer2/CheckBox_Keyb" to="." method="_on_check_box_keyb_toggled"]
+[connection signal="value_changed" from="SettingsScreen/Options/SoundVbox/VBoxContainer/music" to="." method="_on_music_value_changed"]
+[connection signal="value_changed" from="SettingsScreen/Options/SoundVbox/VBoxContainer2/soundeffect" to="." method="_on_soundeffect_value_changed"]
+[connection signal="item_selected" from="SettingsScreen/Options/BrightnessVbox/VBoxContainer/ResolutionHbox/ScreenOptions" to="." method="_on_screen_options_item_selected"]
+[connection signal="pressed" from="SettingsScreen/Warning/VBoxContainer/Choice/Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="SettingsScreen/Warning/VBoxContainer/Choice/No" to="." method="_on_no_pressed"]
+[connection signal="finished" from="MenuMusic" to="." method="_on_audio_stream_player_finished"]

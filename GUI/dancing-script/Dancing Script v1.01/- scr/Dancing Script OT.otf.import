@@ -1,0 +1,33 @@
+[remap]
+
+importer="font_data_dynamic"
+type="FontFile"
+uid="uid://b7ovm26h5cd14"
+path="res://.godot/imported/Dancing Script OT.otf-c767373e9baf93f092ac25820f07becf.fontdata"
+
+[deps]
+
+source_file="res://GUI/dancing-script/Dancing Script v1.01/- scr/Dancing Script OT.otf"
+dest_files=["res://.godot/imported/Dancing Script OT.otf-c767373e9baf93f092ac25820f07becf.fontdata"]
+
+[params]
+
+Rendering=null
+antialiasing=1
+generate_mipmaps=false
+multichannel_signed_distance_field=false
+msdf_pixel_range=8
+msdf_size=48
+allow_system_fallback=true
+force_autohinter=false
+hinting=1
+subpixel_positioning=1
+oversampling=0.0
+Fallbacks=null
+fallbacks=[]
+Compress=null
+compress=true
+preload=[]
+language_support={}
+script_support={}
+opentype_features={}

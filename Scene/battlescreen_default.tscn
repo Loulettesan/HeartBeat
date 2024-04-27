@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4bsd4nv0fd30"]
+
+[ext_resource type="Script" path="res://Scripts/battlescreen_default.gd" id="1_rrpkp"]
+
+[node name="battlescreen_default" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rrpkp")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bottom_part" type="VBoxContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 2
+
+[node name="hb_level" type="HSlider" parent="UI/bottom_part"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UI/bottom_part"]
+layout_mode = 2
+
+[node name="action_part" type="VBoxContainer" parent="UI"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+alignment = 1
+
+[node name="fight_back" type="TextureButton" parent="UI/action_part"]
+layout_mode = 2
+
+[node name="action" type="TextureButton" parent="UI/action_part"]
+layout_mode = 2
+
+[node name="items" type="TextureButton" parent="UI/action_part"]
+layout_mode = 2
+
+[node name="pass" type="TextureButton" parent="UI/action_part"]
+layout_mode = 2
+
+[node name="enemy" type="Sprite2D" parent="."]
+
+[node name="player" type="Sprite2D" parent="."]
+
+[node name="heartbear_bar" type="Sprite2D" parent="."]

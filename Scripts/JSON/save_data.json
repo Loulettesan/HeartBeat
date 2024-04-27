@@ -1,0 +1,7 @@
+{
+	"settings": {"controldevice": "gamepad", "windowed": true, "volumemusic": 100, "volumesound": 100, "language": "fr"}, // default settings
+	"pos": [0,0],
+	"equip": "", // "Object"
+	"quest_done": [], // ["Quest1", "Quest2"]
+	"bag": [] // ["Object1", "Object2"]
+}
