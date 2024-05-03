@@ -40,4 +40,3 @@ func pick_new_state():
 
 func change_pos(pos: Vector2):
 	self.position = pos
-	move_and_slide()

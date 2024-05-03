@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://c7d1k8qyh570b"]
 
-[ext_resource type="Script" path="res://Scene/home.gd" id="1_3x143"]
+[ext_resource type="Script" path="res://Scripts/home.gd" id="1_3x143"]
 [ext_resource type="PackedScene" uid="uid://cmfm6uneo7sqe" path="res://Scene/player.tscn" id="1_8i5ou"]
 [ext_resource type="Texture2D" uid="uid://bhk578qjgqks1" path="res://Sprites/Doodles/Home_Furniture.png" id="2_3t781"]
 [ext_resource type="Texture2D" uid="uid://hsay6oya2d7r" path="res://Sprites/Doodles/Walls_Floors.png" id="2_ig5ku"]

@@ -53,20 +53,22 @@ func begin_dialogue(node_description): # 0 : Name , 1 : Text , 2 : If Choice, 3 
 	
 
 func _on_choice_1_pressed(): # Bouton Positif (Oui, D'accord, Prendre ...)
+	$TextureRect.visible = true
 	$AnimationPlayer.play("fade")
 	$Timer.start(1)
 	await $Timer.timeout
 	$ChoiceContainer.hide()
 	$AnimationPlayer.play("disappear")
-	$Timer.start(0.5)
+	$Timer.start(1)
 	await $Timer.timeout
 	if choice_changescene != "":
 		get_tree().change_scene_to_file(choice_changescene)
 	elif choice_teleport != "":
 		get_tree().call_group("Rpg_Player", "change_pos", get_node("/root/Node2D/Pos_Points/"+choice_teleport).get_position())
-	$Timer.start(1)
-	await $Timer.timeout
-	$AnimationPlayer.play("unfade")
+		$Timer.start(3)
+		await $Timer.timeout
+		$AnimationPlayer.queue("unfade")
+		$TextureRect.visible = false
 
 
 func _on_choice_2_pressed(): # Bouton Négatif (Non, Refuser, Laisser ...)

@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var description = []
+@export var diag: String = ""
 
 @onready var dialogue_node = preload("res://Scene/player.tscn").instantiate()
 
@@ -8,6 +9,8 @@ signal InteractButton_pressed
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if diag:
+		var dialogue = DialoguesHouse.get("diag") 
 	if description != []:
 		if typeof(description[0]) == 28:
 			print("Array")

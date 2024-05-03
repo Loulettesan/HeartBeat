@@ -12,6 +12,10 @@ extends Control
 @onready var confirm_sound = $ButtonConfirm
 @onready var decline_sound = $ButtonDecline
 
+@onready var warning_screen = $SettingsScreen/Warning
+@onready var warning_no = $SettingsScreen/Warning/VBoxContainer/Choice/No
+@onready var input_visual = $SettingsScreen/Options/HBoxContainer/VBoxContainer/InputControls
+
 var keyb = true
 var volume = 0
 
@@ -39,7 +43,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	if not keyb:
-		$SettingsScreen/Options/HBoxContainer/VBoxContainer/InputControls.texture = load("res://GUI/controller.png")
+		input_visual.texture = load("res://GUI/controller.png")
 		$SettingsScreen/Exit.hide()
 		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 		get_tree().call_group("MainButtons", "mouse_filter", 2)
@@ -48,7 +52,7 @@ func _physics_process(delta):
 		slide_soundeffect.tick_count = 11
 		slide_soundeffect.step = 3
 	else:
-		$SettingsScreen/Options/HBoxContainer/VBoxContainer/InputControls.texture = load("res://GUI/keyb.png") 
+		input_visual.texture = load("res://GUI/keyb.png") 
 		$SettingsScreen/Exit.show()
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_tree().call_group("MainButtons", "mouse_filter", 0)
@@ -57,13 +61,13 @@ func _physics_process(delta):
 		slide_soundeffect.tick_count = 0
 		slide_soundeffect.step = 0
 		
-	if $SettingsScreen/Warning.visible and Input.is_action_just_pressed("decline"):
+	if warning_screen.visible and Input.is_action_just_pressed("decline"):
 		slide_soundeffect.button_pressed = false
 		controller_check.button_pressed = true
 		get_tree().call_group("SettingsButtons", "set_disabled", false)
 	if $SettingsScreen.visible and Input.is_action_just_pressed("decline"):
 		$SettingsScreen.hide()
-		$SettingsScreen/Warning.hide()
+		warning_screen.hide()
 		decline_sound.play()
 		get_tree().call_group("MainButtons", "set_disabled", false)
 		$Menu/Buttons/Settings.grab_focus()
@@ -84,7 +88,6 @@ func _on_load_pressed():
 	confirm_sound.play()
 	await confirm_sound.finished
 	# get_tree().change_scene("")
-	pass # Replace with function body.
 
 func _on_start_pressed():
 	confirm_sound.play()
@@ -104,8 +107,8 @@ func _on_check_button_toggled(button_pressed):
 	if button_pressed == true:
 		confirm_sound.play()
 		get_tree().call_group("SettingsButtons", "focus_mode", "None")
-		$SettingsScreen/Warning.show()
-		$SettingsScreen/Warning/VBoxContainer/Choice/No.grab_focus()
+		warning_screen.show()
+		warning_no.grab_focus()
 	if button_pressed == false:
 		confirm_sound.play()
 		keyb = false
@@ -113,7 +116,7 @@ func _on_check_button_toggled(button_pressed):
 func _on_yes_pressed():
 	confirm_sound.play()
 	get_tree().call_group("SettingsButtons", "set_disabled", false)
-	$SettingsScreen/Warning.hide()
+	warning_screen.hide()
 	keyb = true
 
 func _on_no_pressed():
@@ -121,13 +124,13 @@ func _on_no_pressed():
 	get_tree().call_group("SettingsButtons", "set_disabled", false)
 	slide_soundeffect.button_pressed = false
 	controller_check.button_pressed = true
-	$SettingsScreen/Warning.hide()
+	warning_screen.hide()
 	controller_check.grab_focus()
 	keyb = false
 
 func _on_screen_options_item_selected(index):
 	if index == 0:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
 	if index == 1:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
@@ -136,8 +139,8 @@ func _on_check_box_keyb_toggled(button_pressed):
 		confirm_sound.play()
 		controller_check.button_pressed = false
 		get_tree().call_group("SettingsButtons", "focus_mode", "None")
-		$SettingsScreen/Warning.show()
-		$SettingsScreen/Warning/VBoxContainer/Choice/No.grab_focus()
+		warning_screen.show()
+		warning_no.grab_focus()
 	if button_pressed == false:
 		decline_sound.play()
 		controller_check.button_pressed = true
@@ -153,8 +156,8 @@ func _on_check_box_cont_toggled(button_pressed):
 		keyb_check.button_pressed = true
 		keyb = true
 		get_tree().call_group("SettingsButtons", "focus_mode", "None")
-		$SettingsScreen/Warning.show()
-		$SettingsScreen/Warning/VBoxContainer/Choice/No.grab_focus()
+		warning_screen.show()
+		warning_no.grab_focus()
 
 func _on_music_value_changed(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), value)
@@ -163,6 +166,3 @@ func _on_music_value_changed(value):
 func _on_soundeffect_value_changed(value):
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SoundEffect"), value)
 	confirm_sound.play()
-
-func _on_bright_value_changed(value):
-	GlobalWorldEnvironment.environment.set_adjustment_brightness((0.7 + (value/100)))

@@ -16,9 +16,9 @@ dest_files=["res://.godot/imported/menu_bg_0040.png-fc5b3213c88d5562a046b02a45d5
 [params]
 
 compress/mode=0
+compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=false
